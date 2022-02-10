@@ -1,9 +1,9 @@
 {
-  "name": "Image upload bot",
+  "name": "Photo Ka Link",
   "description": "A bot to upload telegram images to telegraph",
-  "repository": "https://github.com/REX-BOTZ/REX-TELEGRAPH-UPLOADER",
-  "logo": "https://telegra.ph/file/c902c5444d2a51612ba4a.jpg",
-  "keywords": ["telegram", "telegraph", "imageuploader","telegram bot"],
+  "repository": "https://github.com/RoyalKrrishna/PhotoKaLink",
+  "logo": "https://telegra.ph/file/4a3c924bc103e4a98f605.jpg",
+  "keywords": ["telegram", "telegraph", "photouploader", "imageuploader","telegram bot"],
   "env": {
      "BOT_TOKEN": {
       "description": "Your Bot token from @Botfather",
