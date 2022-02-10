@@ -8,7 +8,7 @@ from telegraph import upload_file
 async def start(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"Hey {message.from_user.first_name}😚,\nI Can Upload Your <b>Images Or Videos</b> From/nTelegram To Telegra.ph And Send You The Link.\nCreated By <b>@RoyalKrrishna</b>\nClick <b>/help</b> For More.",
+        text=f"<b>Hey {message.from_user.first_name}😚,\nI Can Upload Your Images Or Videos From\nTelegram To Telegra.ph And Send You The Link.\nCreated By <b>@RoyalKrrishna\nClick /help For More.</b>",
         reply_to_message_id=message.message_id
     )
 
@@ -16,7 +16,7 @@ async def start(client, message):
 async def help(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"Send Me Or Forward Me Any Of Your <b>Photos Or Videos</b> I'll Upload It To Telegra.ph And Provide You A Link.\nListen:- You Can Upload Only 5MB Files At Once So It's Better To Upload Only Images.\nCreated By <b>@RoyalKrrishna</b>",
+        text=f"<b>Send Me Or Forward Me Any Of Your Photos Or Videos, I'll Upload It To Telegra.ph And Provide You A Link.\nListen:- You Can Upload Only 5MB Files At Once So It's Better To Upload Only Images.\nCreated By @RoyalKrrishna</b>",
         reply_to_message_id=message.message_id
     )
     
