@@ -8,7 +8,7 @@ from telegraph import upload_file
 async def start(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"Hello {message.from_user.first_name},\n<b>I Can Upload Images/Videos From Telegram To Telegra.ph And Send You The Link. Created By @RoyalKrrishna\nClick /help For More</b>",
+        text=f"Hey {message.from_user.first_name}😚,\nI Can Upload Your <b>Images Or Videos</b> From/nTelegram To Telegra.ph And Send You The Link.\nCreated By <b>@RoyalKrrishna</b>\nClick <b>/help</b> For More.",
         reply_to_message_id=message.message_id
     )
 
@@ -16,7 +16,7 @@ async def start(client, message):
 async def help(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"<b>Send Me Or Forward Me Any Of Your Photos/Videos I'll Upload It To Telegra.ph And Provide You A Link.\nListen:- You Can Upload Only 5MB Files At Once\nIt's Better To Upload Only Images.\nCreated By @RoyalKrrishna</b>",
+        text=f"Send Me Or Forward Me Any Of Your <b>Photos Or Videos</b> I'll Upload It To Telegra.ph And Provide You A Link.\nListen:- You Can Upload Only 5MB Files At Once So It's Better To Upload Only Images.\nCreated By <b>@RoyalKrrishna</b>",
         reply_to_message_id=message.message_id
     )
     
@@ -39,7 +39,7 @@ async def getimage(client, message):
     try:
         response = upload_file(imgdir)
     except Exception as error:
-        await dwn.edit_text(f"Oops Something Went Wrong!\nSend Photo/Video Again Or Contact @RoyalKrrishna")
+        await dwn.edit_text(f"Oops Something Went Wrong!\nSend Photo/Video Again Or Contact <b>@RoyalKrrishna</b>")
         return
     await dwn.edit_text(f"https://telegra.ph{response[0]}")
     try:
@@ -66,7 +66,7 @@ async def getvideo(client, message):
     try:
         response = upload_file(viddir)
     except Exception as error:
-        await dwn.edit_text(f"Oops Something Went Wrong\n{error} Contact @Royalkrrishna")
+        await dwn.edit_text(f"Oops Something Went Wrong\n{error} Contact <b>@Royalkrrishna</b>")
         return
     await dwn.edit_text(f"https://telegra.ph{response[0]}")
     try:
