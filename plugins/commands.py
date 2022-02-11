@@ -68,8 +68,10 @@ async def getvideo(client, message):
     except Exception as error:
         await dwn.edit_text(f"Oops Something Went Wrong\n{error} Contact <b>@Royalkrrishna 🕵️</b>")
         return
-    await dwn.edit_text
-       (f"https://telegra.ph{response[0]}",disable_web_page_preview=True)
+    await dwn.edit_text(
+             f"https://telegra.ph{response[0]}",
+             disable_web_page_preview=True
+        )
     try:
         os.remove(viddir)
     except:
