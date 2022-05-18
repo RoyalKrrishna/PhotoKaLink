@@ -10,7 +10,7 @@ from telegraph import upload_file
 async def start(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"Hello {message.from_user.first_name},\n<b>I'm a Telegram To Telegra.ph Image/Video Uploader Bot. Created By @REX_BOTZ</b> \n<b>Do /help For More</b>",
+        text=f"<b>Hey {message.from_user.first_name} 😃,\n\nI Can Upload Your Images Or Videos From Telegram To Our Server And Send You A Link.🔗\n\n/help For More!</b>",
         reply_to_message_id=message.message_id
     )
 
@@ -18,7 +18,7 @@ async def start(client, message):
 async def help(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"<b>Send Me Any Video Or Photo I'll Upload It Into Telegra.ph.</b> \n<b>Created By @REX_BOTZ</b>",
+        text=f"<b>Send Me Or Forward Me Any Of Your Photos Or Videos,\nI'll Upload It To Telegra.ph And Provide You A Link.🔗\n\nListen Please:- 🔞+ Contents Are Not Allowed And You Can Upload Only 5MB Files At Once❗\nSo It's Better To Upload Only Images.\n\n<b>Created By @RoyalKrrishna 🕵️</b>",
         reply_to_message_id=message.message_id
     )
     
