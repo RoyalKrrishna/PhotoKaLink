@@ -1,7 +1,5 @@
 pyrogram
-tgcrypto
 telegraph
-motor
-aiofiles
-dnspython
-python-dotenv
+tgcrypto
+telethon
+telegram
