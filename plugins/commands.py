@@ -1,3 +1,5 @@
+
+
 import os
 from pyrogram import Client,filters 
 from telegraph import upload_file
@@ -8,7 +10,7 @@ from telegraph import upload_file
 async def start(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"Hey {message.from_user.first_name}😚,\n\n<b>I Can Upload Your Images Or Videos From\nTelegram To Telegra.ph And Send You A Link.🔗\n\nCreated By @RoyalKrrishna 🕵️\nClick /help For More.❗</b>",
+        text=f"Hello {message.from_user.first_name},\n<b>I'm a Telegram To Telegra.ph Image/Video Uploader Bot. Created By @REX_BOTZ</b> \n<b>Do /help For More</b>",
         reply_to_message_id=message.message_id
     )
 
@@ -16,7 +18,7 @@ async def start(client, message):
 async def help(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        text=f"<b>Send Me Or Forward Me Any Of Your Photos Or Videos,\nI'll Upload It To Telegra.ph And Provide You A Link.🔗\n\nListen Please:- 🔞+ Contents Are Not Allowed And You Can Upload Only 5MB Files At Once❗\nSo It's Better To Upload Only Images.🖼️\n\nCreated By @RoyalKrrishna</b>",
+        text=f"<b>Send Me Any Video Or Photo I'll Upload It Into Telegra.ph.</b> \n<b>Created By @REX_BOTZ</b>",
         reply_to_message_id=message.message_id
     )
     
@@ -39,7 +41,7 @@ async def getimage(client, message):
     try:
         response = upload_file(imgdir)
     except Exception as error:
-        await dwn.edit_text(f"Oops Something Went Wrong!\nSend Photo/Video Again Or Contact <b>@RoyalKrrishna 🕵️</b>")
+        await dwn.edit_text(f"Oops Something Went Wrong\n{error} Contact @Rex_Bots_Support")
         return
     await dwn.edit_text(f"https://telegra.ph{response[0]}")
     try:
@@ -66,11 +68,11 @@ async def getvideo(client, message):
     try:
         response = upload_file(viddir)
     except Exception as error:
-        await dwn.edit_text(f"Oops Something Went Wrong\n{error} Contact <b>@Royalkrrishna 🕵️</b>")
+        await dwn.edit_text(f"Oops Something Went Wrong\n{error} Contact @Rex_Bots_Support")
         return
-    await dwn.edit_text
-        (f"https://telegra.ph{response[0]}")
+    await dwn.edit_text(f"https://telegra.ph{response[0]}")
     try:
         os.remove(viddir)
     except:
         pass
+
