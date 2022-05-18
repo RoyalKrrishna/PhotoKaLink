@@ -41,7 +41,7 @@ async def getimage(client, message):
     except Exception as error:
         await dwn.edit_text(f"Oops Something Went Wrong!\nSend Photo/Video Again Or Contact <b>@RoyalKrrishna 🕵️</b>")
         return
-    await dwn.edit_text(f"https://telegra.ph{response[0]}")
+    await dwn.edit_text(f"<code>https://telegra.ph{response[0]}</code>")
     try:
         os.remove(imgdir)
     except:
@@ -69,7 +69,7 @@ async def getvideo(client, message):
         await dwn.edit_text(f"Oops Something Went Wrong\n{error} Contact <b>@Royalkrrishna 🕵️</b>")
         return
     await dwn.edit_text
-        (f"https://telegra.ph{response[0]}")
+        (f"<code>https://telegra.ph{response[0]}</code>")
     try:
         os.remove(viddir)
     except:
